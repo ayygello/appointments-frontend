@@ -1,0 +1,22 @@
+@mixin purpleButton {
+  color: #fff;
+  background-color: #7761ff;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  cursor: pointer;
+}
+
+@mixin card {
+  display: flex;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #ebe7ff;
+}
+
+@mixin infoBodyText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}

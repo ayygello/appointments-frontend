@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #50caff;
+  height: 55px;
+}
+
+.header__title {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 33.2px;
+  color: #fff;
+  margin: 12px 0 10px 40px;
+}
+
+.header__icons {
+  display: flex;
+}
+
+.header__item {
+  margin: 19px 22px 18px 0;
+  width: 18px;
+}
+
+.header__item_1 {
+  width: 18px;
+  margin: 19px 21.5px 18px 0;
+}
+
+.header__item_2 {
+  width: 14.9px;
+  height: 18px;
+  margin: 19px 21.5px 18px 0;
+}
+
+.header__item_3 {
+  width: 18px;
+  height: 18px;
+  margin: 20px 20px 20.2px 0;
+}
+
+.header__item_4 {
+  width: 16px;
+  margin: 20px 40px 19px 7px;
+}
+
+.header__avatar {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin: 3.2px 7px 3.2px 0;
+  width: 49px;
+}

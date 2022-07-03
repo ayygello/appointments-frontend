@@ -1,0 +1,94 @@
+@use './modules/mixins';
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  height: 100vh;
+  width: 190px;
+  background-color: #003b72;
+  font-size: 14px;
+  line-height: 16.5px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.menu__logo {
+  margin: 20px 114px 19px 20px;
+  color: #fff;
+}
+
+.menu__test {
+  height: 100%;
+}
+
+.menu__list {
+  margin: 0 0 10px 0;
+  padding: 0;
+  li {
+    color: #fff;
+    height: 35px;
+    margin-bottom: 10px;
+    padding: 15px 0 0 50px;
+    list-style: none;
+  }
+  .menu__list_1 {
+    color: #7761ff;
+  }
+}
+
+.menu__list_1 {
+  background: url('/1_1.png') no-repeat;
+  background-position: left 19px top 13.5px;
+  background-size: 18px;
+  background-color: #fcfcfc;
+}
+
+.menu__list_2 {
+  background: url('/menu_2.png') no-repeat;
+  background-position: left 19px top 15px;
+  background-size: 16px;
+}
+
+.menu__list_3 {
+  background: url('/menu_3.png') no-repeat;
+  background-position: left 19px top 15px;
+  background-size: 16px;
+}
+
+.menu__list_4 {
+  background: url('/menu_4.png') no-repeat;
+  background-position: left 19px top 15px;
+  background-size: 16px;
+}
+
+.menu__list_5 {
+  background: url('/menu_5.png') no-repeat;
+  background-position: left 19px top 15px;
+  background-size: 16px;
+}
+
+.menu__list_6 {
+  background: url('/menu_6.png') no-repeat;
+  background-position: left 19px top 15px;
+  background-size: 16px;
+  margin-bottom: 100px;
+}
+
+.menu__request {
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  button {
+    width: 150px;
+    @include mixins.purpleButton;
+  }
+}
+
+.menu__sublogo {
+  max-width: 113px;
+  max-height: 20px;
+  margin: -22px 56px 16px 20px;
+}
