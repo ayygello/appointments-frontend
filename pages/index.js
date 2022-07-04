@@ -10,7 +10,7 @@ import AddLogo from '../components/AddInfo/AddLogo';
 import AddBody from '../components/AddInfo/AddBody';
 import HistoryLogo from '../components/History/HistoryLogo';
 import HistoryBody from '../components/History/HistoryBody';
-import { loadAppointments } from '../api';
+import { cancelAppointment, loadAppointments } from '../api';
 
 const MyProfile = ({ appointments }) => {
   return (
@@ -20,8 +20,8 @@ const MyProfile = ({ appointments }) => {
           <h1>Записи на прием</h1>
         </div>
         <div className='doctors__row'>
-          {appointments.map((appointment) => {
-            if (appointment.id <= 2) {
+          {appointments.map((appointment, index) => {
+            if (index < 2) {
               return (
                 <DoctorsCard
                   key={appointment.id}
@@ -30,11 +30,14 @@ const MyProfile = ({ appointments }) => {
                   avatar={appointment.avatar}
                   name={appointment.name}
                   position={appointment.position}
+                  onCancel={() => cancelAppointment(appointment.id)}
                 />
               );
             }
           })}
-          <ExtraRecord count={appointments.length - 2} />
+          {appointments.length > 2 && (
+            <ExtraRecord count={appointments.length - 2} />
+          )}
         </div>
         <div className='doctors__title'>
           <h1>Электронная карта</h1>

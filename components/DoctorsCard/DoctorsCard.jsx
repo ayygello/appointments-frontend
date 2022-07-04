@@ -1,4 +1,4 @@
-const DoctorsCard = ({ title, subtitle, avatar, name, position }) => {
+const DoctorsCard = ({ title, subtitle, avatar, name, position, onCancel }) => {
   return (
     <>
       <div className='card'>
@@ -14,7 +14,7 @@ const DoctorsCard = ({ title, subtitle, avatar, name, position }) => {
           </div>
         </div>
         <div className='card__button'>
-          <button>Отменить</button>
+          <button onClick={onCancel}>Отменить</button>
         </div>
       </div>
     </>

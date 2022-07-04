@@ -1,6 +1,5 @@
-import axios from 'axios';
 import Link from 'next/link';
-import { loadAppointments, loadDays } from '../../api';
+import { cancelAppointment, loadAppointments, loadDays } from '../../api';
 import Calendar from '../../components/Calendar/Calendar';
 import DoctorsCard from '../../components/DoctorsCard/DoctorsCard';
 import Layout from '../../components/Layout';
@@ -26,6 +25,7 @@ const Appointments = ({ days, appointments }) => {
                 avatar={appointment.avatar}
                 name={appointment.name}
                 position={appointment.position}
+                onCancel={() => cancelAppointment(appointment.id)}
               />
             ))}
           </div>
