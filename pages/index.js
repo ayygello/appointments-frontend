@@ -10,7 +10,7 @@ import AddLogo from '../components/AddInfo/AddLogo';
 import AddBody from '../components/AddInfo/AddBody';
 import HistoryLogo from '../components/History/HistoryLogo';
 import HistoryBody from '../components/History/HistoryBody';
-import axios from 'axios';
+import { loadAppointments } from '../api';
 
 const MyProfile = ({ appointments }) => {
   return (
@@ -53,13 +53,7 @@ const MyProfile = ({ appointments }) => {
 };
 
 export const getStaticProps = async () => {
-  const response = await axios.get('http://localhost:7777/appointments');
-
-  if (response.statusText !== 'OK') {
-    throw new Error(response.statusText);
-  }
-
-  const appointments = await response.data;
+  const appointments = await loadAppointments();
   return { props: { appointments } };
 };
 

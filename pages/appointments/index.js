@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Link from 'next/link';
+import { loadAppointments, loadDays } from '../../api';
 import Calendar from '../../components/Calendar/Calendar';
 import DoctorsCard from '../../components/DoctorsCard/DoctorsCard';
 import Layout from '../../components/Layout';
@@ -36,15 +37,8 @@ const Appointments = ({ days, appointments }) => {
 };
 
 export const getStaticProps = async () => {
-  const res1 = await axios.get('http://localhost:7777/days');
-  const res2 = await axios.get('http://localhost:7777/appointments');
-
-  if (res1.statusText !== 'OK' || res2.statusText !== 'OK') {
-    throw new Error(response.statusText);
-  }
-
-  const days = await res1.data;
-  const appointments = await res2.data;
+  const appointments = await loadAppointments();
+  const days = await loadDays();
   return { props: { days, appointments } };
 };
 
