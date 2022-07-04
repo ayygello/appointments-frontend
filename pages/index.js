@@ -55,7 +55,7 @@ const MyProfile = ({ appointments }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const appointments = await loadAppointments();
   return { props: { appointments } };
 };

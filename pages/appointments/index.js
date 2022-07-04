@@ -36,7 +36,7 @@ const Appointments = ({ days, appointments }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const appointments = await loadAppointments();
   const days = await loadDays();
   return { props: { days, appointments } };
