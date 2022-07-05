@@ -11,6 +11,7 @@ import AddBody from '../components/AddInfo/AddBody';
 import HistoryLogo from '../components/History/HistoryLogo';
 import HistoryBody from '../components/History/HistoryBody';
 import { cancelAppointment, loadAppointments } from './api';
+import axios from 'axios';
 
 const MyProfile = ({ appointments }) => {
   return (
@@ -55,7 +56,7 @@ const MyProfile = ({ appointments }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const appointments = await loadAppointments();
   return { props: { appointments } };
 };
