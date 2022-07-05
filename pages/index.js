@@ -10,7 +10,7 @@ import AddLogo from '../components/AddInfo/AddLogo';
 import AddBody from '../components/AddInfo/AddBody';
 import HistoryLogo from '../components/History/HistoryLogo';
 import HistoryBody from '../components/History/HistoryBody';
-import { cancelAppointment, loadAppointments } from '../api';
+import { cancelAppointment, loadAppointments } from './api';
 
 const MyProfile = ({ appointments }) => {
   return (
