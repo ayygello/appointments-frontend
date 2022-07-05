@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const loadAppointments = async () => {
-  const response = await axios.get('http://localhost:7777/appointments');
+  const response = await axios.get(`${process.env.API_HOST}/appointments`);
 
   if (response.statusText !== 'OK') {
     throw new Error(response.statusText);
@@ -13,7 +13,7 @@ export const loadAppointments = async () => {
 
 export const cancelAppointment = async (id) => {
   const response = await axios.delete(
-    `http://localhost:7777/appointments/${id}`
+    `${process.env.API_HOST}/appointments/${id}`
   );
 
   if (response.statusText !== 'OK') {
@@ -22,7 +22,7 @@ export const cancelAppointment = async (id) => {
 };
 
 export const loadDays = async () => {
-  const response = await axios.get('http://localhost:7777/days');
+  const response = await axios.get(`${process.env.API_HOST}/days`);
 
   if (response.statusText !== 'OK') {
     throw new Error(response.statusText);
