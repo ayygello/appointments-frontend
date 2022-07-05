@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "concurrently \"npm run dev\" \"npm run mock\"",
     "serve": "concurrently \"npm run dev\" \"npm run mock\"",
     "mock": "json-server -w db.json -p 7777 -d 500",
     "lint": "next lint"
