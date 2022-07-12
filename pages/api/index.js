@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+axios.defaults.baseURL = 'https://appointments-server-ayygello.herokuapp.com';
+
 export const loadAppointments = async () => {
-  const response = await axios.get(`${process.env.API_HOST}/appointments`);
+  const response = await axios.get(`/appointments`);
 
   if (response.statusText !== 'OK') {
     throw new Error(response.statusText);
@@ -12,9 +14,7 @@ export const loadAppointments = async () => {
 };
 
 export const cancelAppointment = async (id) => {
-  const response = await axios.delete(
-    `${process.env.API_HOST}/appointments/${id}`
-  );
+  const response = await axios.delete(`/appointments/${id}`);
 
   if (response.statusText !== 'OK') {
     throw new Error(response.statusText);
@@ -22,7 +22,7 @@ export const cancelAppointment = async (id) => {
 };
 
 export const loadDays = async () => {
-  const response = await axios.get(`${process.env.API_HOST}/days`);
+  const response = await axios.get(`/days`);
 
   if (response.statusText !== 'OK') {
     throw new Error(response.statusText);
