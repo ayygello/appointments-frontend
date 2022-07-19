@@ -40,7 +40,7 @@ const MyProfile = ({ appointments }) => {
           )}
         </div>
         <div className='doctors__title'>
-          <h1>Электронная карта</h1>
+          <h2>Электронная карта</h2>
         </div>
         <div className='info'>
           <div className='info__row'>

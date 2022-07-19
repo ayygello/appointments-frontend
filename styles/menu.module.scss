@@ -1,5 +1,22 @@
 @use './modules/mixins';
 
+@media screen and (max-width: 1000px) {
+  .menu {
+    width: 15% !important;
+  }
+
+  .menu__list {
+    li {
+      color: rgba($color: #fff, $alpha: 0) !important;
+    }
+  }
+
+  .menu__logo {
+    margin: 20px 10px !important;
+    font-size: 10px !important;
+  }
+}
+
 .menu {
   display: flex;
   flex-direction: column;

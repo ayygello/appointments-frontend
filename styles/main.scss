@@ -46,13 +46,36 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .doctors__row {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 90% !important;
+  }
+
+  .record {
+    margin: 20px !important;
+  }
+
+  .doctors__title {
+    h2 {
+      margin-top: 40px !important;
+    }
+  }
+
+  .info__card {
+    width: 110% !important;
+  }
+}
+
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif;
 }
 
 .wrapper {
-  // height: 100vh;
   overflow: hidden;
   background-color: #fcfcfc;
   max-width: 1366px;
@@ -69,7 +92,8 @@ body {
 }
 
 .doctors__title {
-  h1 {
+  h1,
+  h2 {
     font-size: 16px;
     line-height: 19px;
     margin: 0 0 15px 40px;

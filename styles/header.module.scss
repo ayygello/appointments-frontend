@@ -1,3 +1,10 @@
+@media screen and (max-width: 1000px) {
+  .header__title {
+    font-size: 18px !important;
+    color: rgba($color: #fff, $alpha: 0) !important;
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-between;
