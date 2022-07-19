@@ -1,17 +1,16 @@
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import DoctorsCard from '../components/DoctorsCard/DoctorsCard';
 import ExtraRecord from '../components/ExtraRecord/ExtraRecord';
-import AboutLogo from '../components/AboutPatient/AboutLogo';
-import AboutBody from '../components/AboutPatient/AboutBody';
 import InfoCard from '../components/InfoCard/InfoCard';
-import ResultsLogo from '../components/Results/ResultsLogo';
-import ResultsBody from '../components/Results/ResultsBody';
-import AddLogo from '../components/AddInfo/AddLogo';
-import AddBody from '../components/AddInfo/AddBody';
-import HistoryLogo from '../components/History/HistoryLogo';
-import HistoryBody from '../components/History/HistoryBody';
+import AboutLogo from '../components/InfoCard/AboutPatient/AboutLogo';
+import AboutBody from '../components/InfoCard/AboutPatient/AboutBody';
+import ResultsLogo from '../components/InfoCard/Results/ResultsLogo';
+import ResultsBody from '../components/InfoCard/Results/ResultsBody';
+import AddLogo from '../components/InfoCard/AddInfo/AddLogo';
+import AddBody from '../components/InfoCard/AddInfo/AddBody';
+import HistoryLogo from '../components/InfoCard/History/HistoryLogo';
+import HistoryBody from '../components/InfoCard/History/HistoryBody';
 import { cancelAppointment, loadAppointments } from './api';
-import axios from 'axios';
 
 const MyProfile = ({ appointments }) => {
   return (

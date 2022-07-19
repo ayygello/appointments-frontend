@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Header from './Header';
-import Menu from './Menu';
+import Header from '../Header/Header';
+import Menu from '../Menu/Menu';
 
 const Layout = ({ children, title }) => {
   return (

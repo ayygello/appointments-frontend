@@ -1,4 +1,4 @@
-import classes from '../styles/header.module.scss';
+import classes from '../../styles/header.module.scss';
 
 const Header = () => {
   return (

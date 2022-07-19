@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { cancelAppointment, loadAppointments, loadDays } from '../api';
 import Calendar from '../../components/Calendar/Calendar';
 import DoctorsCard from '../../components/DoctorsCard/DoctorsCard';
-import Layout from '../../components/Layout';
+import Layout from '../../components/Layout/Layout';
 import classes from '../../styles/appoinments.module.scss';
 
 const Appointments = ({ days, appointments }) => {

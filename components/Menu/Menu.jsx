@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import menuClasses from '../styles/menu.module.scss';
+import menuClasses from '../../styles/menu.module.scss';
 
 const Menu = () => {
   return (
@@ -14,13 +14,14 @@ const Menu = () => {
         <li className={menuClasses.menu__list_4}>Тестирование</li>
         <li className={menuClasses.menu__list_5}>Полезно знать</li>
       </ul>
-      <div className={menuClasses.menu__request}>
-        <button>Подать заявку</button>
-      </div>
+      <Link href={'/newAppointment'}>
+        <div className={menuClasses.menu__request}>
+          <button>Подать заявку</button>
+        </div>
+      </Link>
       <ul className={menuClasses.menu__list}>
         <li className={menuClasses.menu__list_6}>Помощь</li>
       </ul>
-      <img src='/logo.png' alt='logo' className={menuClasses.menu__sublogo} />
     </nav>
   );
 };

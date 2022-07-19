@@ -14,6 +14,25 @@
     font-size: 12px !important;
   }
 
+  .info__card {
+    width: 44% !important;
+  }
+
+  .info__title {
+    font-size: 18px !important;
+  }
+
+  .info__body {
+    ul {
+      li {
+        font-size: 14px !important;
+      }
+    }
+    p {
+      font-size: 14px !important;
+    }
+  }
+
   .card__image {
     width: 45px;
   }
@@ -33,7 +52,7 @@ body {
 }
 
 .wrapper {
-  height: 100vh;
+  // height: 100vh;
   overflow: hidden;
   background-color: #fcfcfc;
   max-width: 1366px;
@@ -144,7 +163,7 @@ body {
 
 .info__card {
   width: 47%;
-  max-height: 183px;
+  cursor: pointer;
   @include mixins.card;
   align-items: center;
   margin: 0 16px 15px 2.5px;
@@ -167,6 +186,7 @@ body {
 }
 
 .info__logo {
+  height: 100%;
   img {
     width: 50px;
     margin: 67px 41px 66px 42px;
