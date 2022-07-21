@@ -7,7 +7,8 @@
 
   .menu__list {
     li {
-      color: rgba($color: #fff, $alpha: 0) !important;
+      font-size: 10px !important;
+      padding-left: 45px !important;
     }
   }
 
@@ -17,11 +18,19 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .menu__list {
+    li {
+      color: rgba($color: #fff, $alpha: 0) !important;
+    }
+  }
+}
+
 .menu {
   display: flex;
   flex-direction: column;
   float: left;
-  height: 100ch;
+  height: 100vh;
   width: 190px;
   background-color: #003b72;
   font-size: 14px;

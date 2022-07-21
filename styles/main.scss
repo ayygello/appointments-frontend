@@ -66,7 +66,32 @@
   }
 
   .info__card {
-    width: 110% !important;
+    height: 100px;
+  }
+
+  .info__logo {
+    img {
+      margin: 24px !important;
+    }
+  }
+
+  .info__body {
+    margin: 20px 5px !important;
+    ul,
+    p,
+    hr {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .doctors__title {
+    display: none !important;
+  }
+
+  .info__card {
+    display: none !important;
   }
 }
 
@@ -80,6 +105,7 @@ body {
   background-color: #fcfcfc;
   max-width: 1366px;
   margin: 0 auto;
+  height: 100vh;
 }
 .doctors {
   margin: 15px 60px 40px 0;
@@ -210,7 +236,6 @@ body {
 }
 
 .info__logo {
-  height: 100%;
   img {
     width: 50px;
     margin: 67px 41px 66px 42px;
