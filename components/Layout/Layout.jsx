@@ -6,7 +6,7 @@ const Layout = ({ children, title }) => {
   return (
     <>
       <Head>
-        <title>{title} | Appvelox</title>
+        <title>{title}</title>
       </Head>
       <div className='wrapper'>
         <Menu />
